@@ -1,0 +1,28 @@
+<!-- <%= form_for @user do |x| %>
+<%= x.label :name %>
+<%= x.text_field :name %> <br>
+<%= x.label :email %>
+<%= x.text_field :email %> <br>
+<%= x.label :password %>
+<%= x.password_field :password %> <br>
+<%= x.label :password_confirmation %>
+<%= x.password_field :password_confirmation %><br>
+<%= x.button %>
+<% end %> -->
+
+<div class="login" align="center">
+  <form action="/users" class="" method="post">
+    <input type="hidden" name="authenticity_token" value="" />
+
+    <label for="">Name</label>
+    <input type="text" name="user[name]" value="" placeholder="Name" class="form-control" /><br>
+
+    <label for="">Email</label>
+    <input type="text" name="user[email]" value="" placeholder="Email" class="form-control" /><br>
+
+    <label for="">Password</label>
+    <input type="password" name="user[password]" value="" placeholder="Password" class="form-control" /> <br>
+
+    <button type="submit" class="btn btn-success btn-block" name="commit" value="save">Submit</button>
+  </form>
+</div>
