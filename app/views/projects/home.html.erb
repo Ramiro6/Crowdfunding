@@ -27,7 +27,7 @@
     <li><a href="#">Another action</a></li>
     <li><a href="#">Something else here</a></li>
     <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
+    <li><%= link_to "logout", "/logout", :method => :delete %></li>
   </ul>
   </div>
 </nav>
@@ -37,6 +37,8 @@
 
     <div class="user-img">
       <%= image_tag("monkey.jpg", class: "avatar-responsive img-responsive img-circle", width: "150", height: "150") %>
+      <div class="pp">
+      </div>
     </div>
 
     <div class="star-project">
@@ -52,8 +54,9 @@
           <div class="input-group-addon">.00</div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Transfer cash</button>
+       <button type="submit" class="Transfer-button btn btn-primary">Transfer cash</button>
     </form>
+
 
 </div>
 
