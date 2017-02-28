@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   get '/home', to: 'projects#home'
-  post '/home', to: 'projects#home'
 
 
 end

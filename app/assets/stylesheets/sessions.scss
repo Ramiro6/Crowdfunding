@@ -11,18 +11,75 @@
   width: 300px;
 }
 
-// .btn {
-//   width: 300px;
-// }
-
 .btn-danger:hover {
   color: #fff;
   background-color: #5cb85c;
   border-color: #5cb85c
 }
 
-.user-img {
-  display: block;
+// img - reponsive
+.box {
+  display: flex;
   border: 1px solid black;
-  padding: 60px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin: 10px;
+  height: 300px;
+  justify-content: space-between;
+  // width: 190px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  // flex-wrap: wrap;
+  // flex-direction: column;
 }
+
+.user-img {
+  border: 1px solid black;
+  width: 220px;
+  // border-radius: 50%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.avatar-responsive {
+  // display: inline-block;
+  border-radius: 50%;
+}
+
+.star-project {
+  // display: inline-block;
+  border: 1px solid black;
+  padding: 20px;
+  width: 700px;
+
+
+}
+
+.form-inline{
+  height: 500px;
+   display: flex;
+   align-items: flex-start;
+  //  justify-content: center;
+  border: 1px solid black;
+
+}
+
+
+// @media screen(whidth:) {
+//   .box {
+//     display: flex;
+//     margin: 10px;
+//     justify-content: space-between;
+//     border: 1px solid black;
+//     flex-wrap: wrap;
+//     flex-direction: row;
+//     align-content: center;
+//     // width: 100%
+//   }
+//
+// }
+//
+// @media screen and (whidth:) {
+//
+// }
