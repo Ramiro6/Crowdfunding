@@ -1,5 +1,11 @@
 class ProjectsController < ApplicationController
   before_action :authorize_user
+
+  def avatar
+    @img = Project.new
+    @img.save
+  end
+
   def home
     if current_user.nil?
       @name = "..."
@@ -11,6 +17,10 @@ class ProjectsController < ApplicationController
 
   def new
     @img = Project.new
+
+    if @img.save
+
+    end
   end
 
   def create
