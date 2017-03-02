@@ -10,5 +10,4 @@ Rails.application.routes.draw do
   get '/home', to: 'projects#home'
   get '/config', to: 'projects#avatar'
 
-
 end

@@ -2,8 +2,7 @@ class ProjectsController < ApplicationController
   before_action :authorize_user
 
   def avatar
-    @img = Project.new
-    @img.save
+    @config = Project.new
   end
 
   def home
@@ -12,23 +11,21 @@ class ProjectsController < ApplicationController
     else
       @name = current_user.name
     end
-    @img = Project.new
+    @config = Project.new
   end
 
   def new
-    @img = Project.new
-
-    if @img.save
-
-    end
+    @config = Project.new
   end
 
   def create
-    @img = Project.create(user_params)
+    @config = Project.create(user_params)
+    if @config.save
+    end
   end
 
   private
   def user_params
-    params.require(:project).permit(:avatar)
+    params.require(:project).permit(:avatar, :texto)
   end
 end
