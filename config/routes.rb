@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :users, :projects
 
   get '/', to: 'index#index'
+  get '/save', to: 'users#save'
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'

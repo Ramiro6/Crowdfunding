@@ -3,17 +3,22 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
 
-.login {
-  border: 1px solid black;
+.color-button-home{
+  color: #5cb85c;
+  background-image: none;
+  background-color: transparent;
+  border-color: #5cb85c
 }
 
-.form-control {
-  width: 300px;
-}
-
-.btn-danger:hover {
+.color-button-home:hover{
   color: #fff;
   background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+
+
+.dropdown-menu {
+  left: -57px;
   border-color: #5cb85c
 }
 

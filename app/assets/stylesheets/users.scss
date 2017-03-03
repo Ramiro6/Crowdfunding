@@ -3,8 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
 
+// login
 .login {
-    border: 1px solid black;
+    // border: 1px solid black;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -15,8 +16,27 @@
 .form-control {
   width: 300px;
 }
-//
-// .btn {
-//   // background-color: orange;
-//     width: 300px;
-// }
+
+// redirect to save
+
+.save-box {
+  position:fixed;
+  height:100%;
+  width: 100%;
+  background-color: #f2f4f5;
+  display: flex;
+  justify-content: center;
+}
+
+.flash-message {
+  border-radius: 20px;
+  // border: 1px solid black;
+  margin-top: 200px;
+  height: 100px;
+  width: 600px;
+  background-color: white;
+}
+
+.flash-message:hover{
+  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.21), 0 6px 20px 0 rgba(247, 174, 125, 0.28);
+}
