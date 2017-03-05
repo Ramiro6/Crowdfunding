@@ -2,10 +2,7 @@
 
   <div class="config-img">
     <h3>Img</h3>
-    <%= form_for @config, :html => {:multipart => true} do |f|%>
-    <%= f.label :avatar %>
-    <%= f.file_field :avatar %>
-    <% end %>
+
 
   </div>
 
@@ -14,8 +11,8 @@
     <div class="config-text" data-toggle="modal" data-target="#myModal1">
         <h3>Text</h3>
           <%= form_for @config do |x| %>
-          <%= x.label :texto %>
-          <%= x.text_area :texto, :size => 150 %>
+          <%= x.label :text %>
+          <%= x.text_area :text, :size => 150 %>
           <%= x.button %>
           <% end %>
     </div>

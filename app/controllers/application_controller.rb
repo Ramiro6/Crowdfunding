@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   def current_user
     if @current_user.nil?
       @current_user = User.find_by(id: session[:user_id])
+      # @current_user = Project.find_by(id: params[:project_id])
     end
     @current_user
   end

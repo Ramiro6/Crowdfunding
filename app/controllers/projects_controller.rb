@@ -10,22 +10,18 @@ class ProjectsController < ApplicationController
       @name = "..."
     else
       @name = current_user.name
+      @text = current_user.projects
     end
-    @config = Project.new
-  end
-
-  def new
     @config = Project.new
   end
 
   def create
-    @config = Project.create(user_params)
-    if @config.save
-    end
+    @config = current_user.projects.create(user_params)
+    redirect_to "/home"
   end
 
   private
   def user_params
-    params.require(:project).permit(:avatar, :texto)
+    params.require(:project).permit(:text)
   end
 end
