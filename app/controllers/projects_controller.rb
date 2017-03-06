@@ -21,7 +21,6 @@ class ProjectsController < ApplicationController
     else
       @name = current_user.name
       @text = current_user.projects
-    
     end
   end
 

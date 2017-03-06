@@ -2,9 +2,10 @@
 
   <div class="config-img">
     <h3>Img</h3>
-    <%= form_for @config, url: users_path, html: { multipart: true } do |form| %>
+    <%= form_for @config, html: { multipart: true } do |form| %>
       <%= form.label :avatar %>
       <%= form.file_field :avatar %>
+      <%= form.submit %>
     <% end %>
 
 
