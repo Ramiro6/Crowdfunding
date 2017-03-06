@@ -1,28 +1,53 @@
-<div class="box-config">
+<div class="box-body">
+  <div class="type-box">
+    <div class="type-config">
+      <h5 align="center" >Config your profile</h5>
 
-  <div class="config-img">
-    <h3>Img</h3>
-    <%= form_for @config, html: { multipart: true } do |form| %>
-      <%= form.label :avatar %>
-      <%= form.file_field :avatar %>
-      <%= form.submit %>
-    <% end %>
+      <div class="avatar-config">
+      <%= form_for @config, html: { multipart: true } do |form| %>
+      <%= form.label :avatar %> | <%= form.file_field :avatar %>
+      <button type="submit" class="btn-color-config btn btn-primary" name="commit" value="save">Submit</button>
+      <% end %>
+      </div>
 
+      <div class="text-config">
+        <%= form_for @config do |x| %>
+        <div class="text-center">
+        <h5><%= x.label :text %></h5>
+        </div>
+        <%= x.text_area :text, size: "80x10" %><br>
+        <div class="text-center">
+        <button type="submit" class="btn-color-config btn btn-primary" align="center" name="commit" value="save">Submit</button>
+        </div>
+        <% end %>
+        </div>
+
+        <div class="text-center">
+          <%= link_to "Back", "/home"%>
+        </div>
+
+
+    </div>
 
   </div>
 
 
+  <!-- <%= form_for @config, html: { multipart: true } do |form| %>
+  <%= form.label :avatar %>
+  <%= form.file_field :avatar %>
+  <%= form.submit %>
+  <% end %>
+<br>
+  <%= form_for @config do |x| %>
+  <%= x.label :text %>
+  <%= x.text_area :text %>
+  <%= x.button %>
+  <% end %> -->
+  <!-- <div class="save-box">
+      <div class="flash-message">
+        <h4 class="text-center">Your account is already created</h4>
+        <h4 class="text-center"><%= link_to "back","/"%></h4>
+      </div>
+  </div> -->
 
-    <div class="config-text" data-toggle="modal" data-target="#myModal1">
-        <h3>Text</h3>
-        <%= form_for @config do |x| %>
-        <%= x.label :text %>
-        <%= x.text_area :text %>
-        <%= x.button %>
-        <% end %>
-
-    </div>
-
-    </div>
-
-<%= @config.text %>
+</div>
