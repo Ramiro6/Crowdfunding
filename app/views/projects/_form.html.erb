@@ -1,0 +1,27 @@
+<div class="box-config">
+
+  <div class="config-img">
+    <h3>Img</h3>
+    <%= form_for @config, url: users_path, html: { multipart: true } do |form| %>
+      <%= form.label :avatar %>
+      <%= form.file_field :avatar %>
+    <% end %>
+
+
+  </div>
+
+
+
+    <div class="config-text" data-toggle="modal" data-target="#myModal1">
+        <h3>Text</h3>
+        <%= form_for @config do |x| %>
+        <%= x.label :text %>
+        <%= x.text_area :text %>
+        <%= x.button %>
+        <% end %>
+
+    </div>
+
+    </div>
+
+<%= @config.text %>

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   get '/home', to: 'projects#home'
-  get '/config', to: 'projects#avatar'
+  get '/config/:project_id', to: 'projects#edit'
+  get '/config/', to: 'projects#new'
 
 end
