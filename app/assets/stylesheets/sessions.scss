@@ -46,11 +46,64 @@
   // flex-direction: column;
 }
 
+
+.cash {
+  // border: 1px solid black;
+  // width: 300px;
+  height: 200px;
+   display: flex;
+  //  align-items: flex-start;
+  // border: 1px solid black;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // padding: 20px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.money{
+  margin-bottom: 20px;
+  // border: 1px solid black;
+  position: relative;
+  left: 80px;
+}
+
+.month-config{
+  font-size: 13px;
+  position: relative;
+  left: 90px;
+  bottom: 20px;
+}
+
+.follow-btn {
+  position: relative;
+  right: 84px;
+  top: 20px;
+  background-color: #e45933;
+  border-color: #e45933;
+}
+.follow-btn:hover {
+  background-color: #d24a25;;
+  border-color: #d24a25;;
+}
+
+.progress-bar {
+  background-color: #5cb85c;
+}
+
+.progress {
+  margin-top: 40px;
+  width: 250px;
+
+}
+
 .user-img {
   // border: 1px solid black;
   width: 220px;
   // padding: 20px;
   // border-radius: 50%;
+  margin-right: 30px;
   height: 250px;
   display: flex;
   flex-direction: column;
@@ -70,7 +123,7 @@
   // display: inline-block;
   // border: 1px solid black;
   padding: 20px;
-  width: 900px;
+  width: 600px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: white;
 
@@ -79,10 +132,11 @@
 
 .form-inline-home{
   width: 300px;
-  // height: 200px;
+  // height: 350px;
    display: flex;
   //  align-items: flex-start;
   // border: 1px solid black;
+  margin-left: 30px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -94,8 +148,14 @@
 
 .Transfer-button{
   margin-top: 10px;
-  width: 255px
+  width: 255px;
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
 
+.Transfer-button:hover{
+  background-color: #54a754;
+  border-color: #54a754;
 }
 
 .button-user {
@@ -185,9 +245,7 @@
   border-color: #419641;
 }
 
-.btn-primary {
-    border-color: #5cb85c;
-}
+
 
 // .save-box {
 //   position:fixed;
