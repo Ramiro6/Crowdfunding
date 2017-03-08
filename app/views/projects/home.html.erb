@@ -31,7 +31,9 @@
           <li><%= link_to "logout", "/logout", :method => :delete %></li>
         </ul>
     </div>
+  </div>
 </nav>
+
 
 
   <div class="box">
@@ -51,7 +53,15 @@
       <% @text.each do |x| %>
       <%= x.text %>
       <% end %>
+
+      <div class="center-post">
+          <% @post.each do |x| %>
+          <%= content_tag(:div, content_tag(:p, x.post_text), class: "star-project-post") %>
+          <% end %>
+      </div>
     </div>
+
+
 
 
 
@@ -88,7 +98,17 @@
 
 
   </div>
+
+  <!-- <div class="center-post">
+      <% @post.each do |x| %>
+      <%= content_tag(:div, content_tag(:p, x.post_text), class: "star-project-post") %>
+      <% end %>
+  </div> -->
+
 </div>
+
+
+
 
 
 

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :users, :projects
-
   get '/', to: 'index#index'
   get '/save', to: 'users#save'
 
@@ -12,6 +11,6 @@ Rails.application.routes.draw do
   get '/home', to: 'projects#home'
   get '/config/:project_id', to: 'projects#edit'
   get '/config/', to: 'projects#new'
-  get '/post', to: 'projects#post'
-
+  get '/post', to: 'posts#new', as: :posts
+  post '/post', to: 'posts#create'
 end

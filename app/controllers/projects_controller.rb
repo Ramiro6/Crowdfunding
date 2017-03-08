@@ -5,24 +5,14 @@ class ProjectsController < ApplicationController
     if current_user.projects.last
       redirect_to "/config/#{current_user.projects.last.id}"
     else
-      @config = Post.new
+      @config = Project.new
       # redirect_to "/config/new"
     end
     # @config = Project.new
   end
 
-  def post
-    @new = Project.new
-  end
-
   def edit
     @config = current_user.projects.find(params[:project_id])
-  end
-
-  def explore
-    @name = current_user.name
-    @text = User.find(2)
-    @entry = @text.projects
   end
 
   def home
@@ -31,6 +21,7 @@ class ProjectsController < ApplicationController
     else
       @name = current_user.name
       @text = current_user.projects
+      @post = current_user.posts
     end
   end
 
@@ -42,11 +33,13 @@ class ProjectsController < ApplicationController
 
   def create
     @config = current_user.projects.create(user_params)
-    redirect_to "/home"
+    if @config.save
+      redirect_to "/home"
+    end
   end
 
   private
   def user_params
-    params.require(:project).permit(:avatar, :text, :img, :post)
+    params.require(:project).permit(:avatar, :text)
   end
 end
