@@ -1,18 +1,28 @@
 class ProjectsController < ApplicationController
-  before_action :authorize_user
+  before_action :authorize_user, :except => [:explore]
 
   def new
     if current_user.projects.last
       redirect_to "/config/#{current_user.projects.last.id}"
     else
-      @config = Project.new
+      @config = Post.new
       # redirect_to "/config/new"
     end
     # @config = Project.new
   end
 
+  def post
+    @new = Project.new
+  end
+
   def edit
     @config = current_user.projects.find(params[:project_id])
+  end
+
+  def explore
+    @name = current_user.name
+    @text = User.find(2)
+    @entry = @text.projects
   end
 
   def home
@@ -37,6 +47,6 @@ class ProjectsController < ApplicationController
 
   private
   def user_params
-    params.require(:project).permit(:avatar, :text)
+    params.require(:project).permit(:avatar, :text, :img, :post)
   end
 end

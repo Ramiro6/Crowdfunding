@@ -1,0 +1,33 @@
+<div class="box-body">
+  <div class="type-box">
+    <div class="type-config">
+      <h5 align="center" >Create new post</h5>
+
+      <div class="avatar-config">
+      <%= form_for @new, html: { multipart: true } do |form| %>
+      <%= form.label :img %> | <%= form.file_field :img %>
+      <button type="submit" class="btn-color-config btn btn-primary" name="commit" value="save">Submit</button>
+      <% end %>
+      </div>
+
+      <div class="text-config">
+        <%= form_for @new do |x| %>
+        <div class="text-center">
+        <h5><%= x.label :post %></h5>
+        </div>
+        <%= x.text_area :post, size: "80x10" %><br>
+        <div class="text-center">
+        <button type="submit" class="btn-color-config btn btn-primary" align="center" name="commit" value="save">Submit</button>
+        </div>
+        <% end %>
+        </div>
+
+        <div class="text-center">
+          <%= link_to "Back", "/home"%>
+        </div>
+
+
+
+    </div>
+
+  </div>

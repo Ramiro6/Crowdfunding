@@ -1,0 +1,44 @@
+<div class="box-body">
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Navbar</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#/">Explore <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle color-button-home" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <%=@name%>
+        <span class="caret"></span>
+      </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><%= link_to "Config", "/config"%></li>
+          <li role="separator" class="divider"></li>
+          <li><%= link_to "logout", "/logout", :method => :delete %></li>
+        </ul>
+    </div>
+</nav>
+
+
+<a href="/home"><div class="user-img">
+  <div class="user-img-circle">
+    <% @entry.each do |x| %>
+    <%= image_tag( x.avatar, class: "avatar-responsive img-responsive img-circle", width: "150", height: "150")  %>
+    <% end %>
+  </div>
+  <div class="button-user">  </div>
+</div></a>

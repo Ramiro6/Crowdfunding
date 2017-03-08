@@ -8,8 +8,10 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
+  get '/explore', to: 'projects#explore'
   get '/home', to: 'projects#home'
   get '/config/:project_id', to: 'projects#edit'
   get '/config/', to: 'projects#new'
+  get '/post', to: 'projects#post'
 
 end

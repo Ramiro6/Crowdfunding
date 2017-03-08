@@ -25,10 +25,10 @@
 // img - reponsive
 
 .box-body {
-  position: fixed;
-  height:100%;
-  width: 100%;
   background-color: #f2f4f5;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
 }
 
 .box {
@@ -87,6 +87,13 @@
   background-color: #d24a25;;
   border-color: #d24a25;;
 }
+
+.money-deposit{
+  position: relative;
+  top: -15px;
+  left: 60px;
+}
+
 
 .progress-bar {
   background-color: #5cb85c;
