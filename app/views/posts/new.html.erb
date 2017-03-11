@@ -3,6 +3,13 @@
     <div class="type-config">
       <h5 align="center" >New Post</h5>
 
+      <div class="avatar-config">
+      <%= form_for @post, html: { multipart: true } do |form| %>
+      <%= form.label :img %> | <%= form.file_field :img %>
+      <button type="submit" class="btn-color-config btn btn-primary" name="commit" value="save">Submit</button>
+      <% end %>
+      </div>
+
       <div class="text-config">
         <%= form_for @post do |x| %>
         <div class="text-center">

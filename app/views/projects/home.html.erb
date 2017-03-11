@@ -58,6 +58,7 @@
 
       <div class="center-post">
           <% @post.each do |x| %>
+          <%= image_tag( x.img, class: "avatar-responsive img-responsive img-circle star-project-post", width: "150", height: "150") %> 
           <%= content_tag(:div, content_tag(:p, x.post_text), class: "star-project-post") %>
           <% end %>
       </div>
