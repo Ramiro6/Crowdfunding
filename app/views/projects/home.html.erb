@@ -43,7 +43,6 @@
         <% @text.each do |x| %>
         <%= image_tag( x.avatar, class: "avatar-responsive img-responsive img-circle", width: "150", height: "150")  %>
         <% end %>
-        <!-- <%= image_tag("monkey.jpg", class: "avatar-responsive img-responsive img-circle", width: "150", height: "150") %> -->
       </div>
 
       <div class="button-user"> </div>
@@ -58,7 +57,7 @@
 
       <div class="center-post">
           <% @post.each do |x| %>
-          <%= image_tag( x.img, class: "avatar-responsive img-responsive img-circle star-project-post", width: "150", height: "150") %> 
+          <%= image_tag( x.img, class: "avatar-responsive img-responsive star-project-post", width: "150", height: "150") %>
           <%= content_tag(:div, content_tag(:p, x.post_text), class: "star-project-post") %>
           <% end %>
       </div>
