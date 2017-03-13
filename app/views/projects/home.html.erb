@@ -58,10 +58,11 @@
           <% @post.each do |x| %>
           <div class="star-project-post">
             <% if x.img.file? %>
-          <%= image_tag( x.img, class: "avatar-responsive img-responsive", width: "150", height: "150")%>
+          <%= image_tag( x.img, class: "img-responsive img-center", width: "300", height: "300")%>
           <% else %>
           <% end %>
-          <%= content_tag(:div, content_tag(:p, x.post_text), class: "") %>
+          <%= content_tag(:div, content_tag(:p, x.post_text), class: "p-style-post") %>
+          <a href="" align="right"><i class="fa fa-trash trash-post"  aria-hidden="true"></i></a>
           </div>
           <!-- <%= x.post_text%> -->
 

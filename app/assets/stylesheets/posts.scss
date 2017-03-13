@@ -1,3 +1,52 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.type-box2{
+  display: flex;
+  justify-content: center;
+}
+
+.type-config2{
+  // border: 1px solid black;
+  // display: flex;
+  height: 600px;
+  width: 600px;
+  background-color: white;
+}
+
+.avatar-config2{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  // border: 1px solid black;
+  font-size: 14px;
+  line-height: 1.25;
+  color: #464a4c;
+  // background-color: #fff;
+  // background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+.text-config2{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  font-size: 14px;
+  line-height: 1.25;
+  color: #464a4c;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+.p-style-post{
+  margin-bottom: -15px;
+}
+
+// p {
+//   margin-bottom: 0px;
+// }
+.trash-post{
+
+}
