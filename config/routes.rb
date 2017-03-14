@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   get '/home', to: 'projects#home'
   get '/config/:project_id', to: 'projects#edit'
   get '/config/', to: 'projects#new'
+
   get '/post', to: 'posts#new', as: :posts
   post '/post', to: 'posts#create'
+  delete '/post/', to: 'posts#destroy'
+
 end

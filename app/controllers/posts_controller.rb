@@ -10,7 +10,12 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to "/home"
     end
+  end
 
+  def destroy
+    @post = Post.find()
+    @post.destroy
+    redirect_to "/home"
   end
 
   private

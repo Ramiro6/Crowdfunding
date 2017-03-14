@@ -63,6 +63,7 @@
           <% end %>
           <%= content_tag(:div, content_tag(:p, x.post_text), class: "p-style-post") %>
           <a href="" align="right"><i class="fa fa-trash trash-post"  aria-hidden="true"></i></a>
+          <%=link_to "Delete", x, method: :delete, data: {confirm: "Are your shore??"}%>
           </div>
           <!-- <%= x.post_text%> -->
 
