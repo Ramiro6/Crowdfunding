@@ -7,8 +7,7 @@ class IndexController < ApplicationController
     else
       @name = current_user.name
     end
-    @user = User.all
-    @entry = Project.all
+    @user = Project.all
   end
 
 end
