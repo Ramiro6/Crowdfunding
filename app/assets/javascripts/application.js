@@ -18,31 +18,76 @@
 // = require bootstrap-sprockets
 // = require_tree .
 
+// function changeProgress (amount) {
+//  $(".progress-bar")
+//    .attr("aria-valuenow", amount)
+//    .width(amount * 100  / 1000 + "%")
+//    .text(amount * 100  / 1000 + "%");
+// }
+
+// $(document).ready(function() {
+//
+//    function changeProgress (amount) {
+//    	$(".progress-bar")
+//    		.attr("aria-valuenow", amount)
+//    		.width(amount + "%")
+//    		.text(amount + "%");
+//   }
+//
+//   $(".Transfer-button").on("click", function (event) {
+//     event.preventDefault();
+//     changeProgress($("#exampleInputAmount").val());
+//
+//     $.ajax({
+//         url: "/home",
+//         type: "POST",
+//         data: {payment: {
+//                  amount: changeProgress($("#exampleInputAmount").val());
+//                  project_id: val, }},
+//         success: function(resp){
+//           console.log("ok");
+//           resp.data.name
+//           $(".project-owner-name").text(resp.data.name)
+//         }
+//     });
+//   });
+// })
+
+// $.ajax({
+//     url: "/home",
+//     type: "POST",
+//     data: {payment: {
+//              amount: $("#exampleInputAmount").val():
+//              project_id: val, }},
+//     success: function(resp){
+//       resp.data.name
+//       $(".project-owner-name").text(resp.data.name)
+//     }
+// });
 
 $(document).ready(function() {
-  console.log("loaded");
-  function changeProgress (amount) {
-  	$(".progress-bar")
-  		.attr("aria-valuenow", amount)
-  		.width(amount + "%")
-  		.text(amount + "%");
-  }
 
+   function changeProgress (amount) {
+   	$(".progress-bar")
+   		.attr("aria-valuenow", amount)
+   		.width(amount + "%")
+   		.text(amount + "%");
+  }
 
   $(".Transfer-button").on("click", function (event) {
     event.preventDefault();
-    console.log("funciona");
     changeProgress($("#exampleInputAmount").val());
-    // $.ajax({
-    //     url: "/home",
-    //     type: "POST",
-    //     data: {payment: {
-    //              amount: $("#exampleInputAmount").val():
-    //              project_id: val, }},
-    //     success: function(resp){
-    //       resp.data.name
-    //       $(".project-owner-name").text(resp.data.name)
-    //     }
-    // });
+
+    $.ajax({
+        url: "/home",
+        type: "POST",
+        data: {payment: {
+                 amount: changeProgress($("#exampleInputAmount").val()),
+                  }},
+        success: function(resp){
+          resp.data.name
+          $(".project-owner-name").text(resp.data.name)
+        }
+    });
   });
 })

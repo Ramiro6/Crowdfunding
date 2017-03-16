@@ -12,11 +12,11 @@ class ProjectsController < ApplicationController
   end
 # binding.pry
   def payment
-    @mount = Project.last.maximum_amount
-    @pay = Project.find(params[:amount])
-
-
-    redirect_to "/home"
+    @amount = Project.last.maximum_amount
+    @deposit = parmas[:payment]
+    @new = Project.new
+    @new.accompanied = "#{@deposit}"
+    @new.save
     # params[:amount] params[:project_id]
     #
     # project = Project.find(params[:project_id])
@@ -59,6 +59,6 @@ class ProjectsController < ApplicationController
 
   private
   def user_params
-    params.require(:project).permit(:avatar, :text, :maximum_amount)
+    params.require(:project).permit(:avatar, :text, :maximum_amount, :accompanied)
   end
 end
