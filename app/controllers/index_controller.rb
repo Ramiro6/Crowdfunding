@@ -11,7 +11,6 @@ class IndexController < ApplicationController
     @text = User.last
     @entry = @text.projects
 
-
   end
 
 end

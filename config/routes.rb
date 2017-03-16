@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get '/explore', to: 'projects#explore'
 
-  get '/home', to: 'projects#home'
+  get '/home/', to: 'projects#home'
   post '/home', to: 'projects#payment'
 
   get '/config/:project_id', to: 'projects#edit'

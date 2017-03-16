@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :authorize_user, :except => [:explore]
+  before_action :authorize_user, :except => [:home]
 
   def new
     if current_user.projects.last
@@ -30,6 +30,11 @@ class ProjectsController < ApplicationController
     #   render :json => { name: name }, :status => 500
     # end
   end
+
+  def explore
+    @home = Project.find(params[:home_id])
+  end
+
   def edit
     @config = current_user.projects.find(params[:project_id])
   end
