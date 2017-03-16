@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :authorize_user, :except => [:home]
+  before_action :authorize_user, :except => [:explore]
 
   def new
     if current_user.projects.last
@@ -33,6 +33,11 @@ class ProjectsController < ApplicationController
 
   def explore
     @home = Project.find(params[:home_id])
+
+    if @home == true
+      @text = current_user.projects
+      @post = current_user.posts
+    end
   end
 
   def edit
