@@ -40,8 +40,9 @@
 
     <div class="user-img">
       <div class="user-img-circle">
-        <% @text.each do |x| %>
-        <%= image_tag( x.avatar, class: "avatar-responsive img-responsive img-circle", width: "150", height: "150")  %>
+        <%if @text.avatar.present?%>
+        <%=image_tag(@text.avatar.url, class: "avatar-responsive img-responsive img-circle", width: "150", height: "150")%>
+        <% end %>
       </div>
 
       <div class="button-user"> </div>
@@ -50,8 +51,7 @@
     <div class="star-project">
       <div class="config-text">
 
-      <%= x.text %>
-      <% end %>
+        <%= @text.text%>
       </div>
 
       <div class="center-post">
@@ -62,8 +62,6 @@
           <% else %>
           <% end %>
           <%= content_tag(:div, content_tag(:p, x.post_text), class: "p-style-post") %>
-          <a href="" align="right"><i class="fa fa-trash trash-post"  aria-hidden="true"></i></a>
-                <%=link_to "Delete", post_path(x, post_id: x.id), method: :delete, data: {confirm: "Are your shore??"}%>
           </div>
           <!-- <%= x.post_text%> -->
 
@@ -74,11 +72,7 @@
 
     <div class="form-inline-home">
       <div class="cash">
-        <div class="money">
-          <% @text.each do |x| %>
-          <h3><%= x.maximum_amount %> $</h3>
-          <% end %>
-        </div>
+
         <p class="month-config">Per month</p>
         <button class="follow-btn btn btn-primary" type="button" name="button">Follow</button>
         <h3 class="money-deposit" style="height: 0px;">1200 $</h3>
@@ -106,10 +100,6 @@
 
 
   </div>
-  <!-- <div class="center-post">
-      <% @post.each do |x| %>
-      <%= content_tag(:div, content_tag(:p, x.post_text), class: "star-project-post") %>
-      <% end %>
-  </div> -->
+
 
 </div>

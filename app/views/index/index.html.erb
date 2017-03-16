@@ -28,7 +28,7 @@
     <% @user.each do |x| %>
     <div class="user-img-index">
       <div class="user-img-circle-index">
-    <%= link_to image_tag( x.avatar, class: "avatar-responsive", width: "150", height: "150"),"/home" %>
+    <%= link_to image_tag( x.avatar, class: "avatar-responsive", width: "150", height: "150"),explore_path(x,project_id: x.id) %>
       <% if x.avatar.file? %>
       <!-- <%= image_tag( x.avatar, class: "avatar-responsive img-responsive img-circle", width: "150", height: "150") %> -->
       <% else %>
