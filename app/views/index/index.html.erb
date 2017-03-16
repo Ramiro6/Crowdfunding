@@ -23,10 +23,14 @@
   </div>
 </nav>
 
+
 <div class="user-img">
   <div class="user-img-circle">
     <% @entry.each do |x| %>
-    <%= image_tag( x.avatar, class: "avatar-responsive img-responsive img-circle", width: "150", height: "150")  %>
+      <% if x.avatar.file? %>
+      <%= image_tag( x.avatar, class: "avatar-responsive img-responsive img-circle", width: "150", height: "150") %>
+      <% else %>
+      <% end  %>
     <% end %>
   </div>
   <div class="button-user">  </div>

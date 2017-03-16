@@ -10,7 +10,26 @@ class ProjectsController < ApplicationController
     end
     # @config = Project.new
   end
+# binding.pry
+  def payment
+    @mount = Project.last.maximum_amount
+    @pay = Project.find(params[:amount])
 
+
+    redirect_to "/home"
+    # params[:amount] params[:project_id]
+    #
+    # project = Project.find(params[:project_id])
+    # name = project.name
+
+    # @payment = current_user.projects.maximum_amount
+    # @payment = Project.new params['subcomment']
+    # if @payment.save
+    #   render :json => { message: "bla" } # send back any data if necessary
+    # else
+    #   render :json => { name: name }, :status => 500
+    # end
+  end
   def edit
     @config = current_user.projects.find(params[:project_id])
   end
@@ -40,6 +59,6 @@ class ProjectsController < ApplicationController
 
   private
   def user_params
-    params.require(:project).permit(:avatar, :text)
+    params.require(:project).permit(:avatar, :text, :maximum_amount)
   end
 end

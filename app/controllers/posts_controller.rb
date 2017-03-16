@@ -13,7 +13,8 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find()
+    # binding.pry
+    @post = Post.find(params[:post_id])
     @post.destroy
     redirect_to "/home"
   end

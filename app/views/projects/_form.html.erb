@@ -10,6 +10,13 @@
       <% end %>
       </div>
 
+      <div class="avatar-config">
+      <%= form_for @config do |y| %>
+      <%= y.label :maximum_amount %> | <%= y.text_field :maximum_amount %>
+      <button type="submit" class="btn-color-config btn btn-primary" name="commit" value="save">Submit</button>
+      <% end %>
+      </div>
+
       <div class="text-config">
         <%= form_for @config do |x| %>
         <div class="text-center">

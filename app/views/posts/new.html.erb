@@ -3,8 +3,8 @@
     <div class="type-config2">
       <h5 align="center" >New Post</h5>
 
-      <div class="avatar-config2">
       <%= form_for @post, html: { multipart: true } do |form| %>
+      <div class="avatar-config2">
       <%= form.label :img %> | <%= form.file_field :img %>
       </div>
 
@@ -13,11 +13,12 @@
           <h5><%= form.label :post_text %></h5>
           <%= form.text_area :post_text, size: "80x10" %>
           <div class="text-center">
-            <button type="submit" class="btn-color-config btn btn-primary" name="commit"    value="save">Submit</button>
+            <%= form.submit %>
+            <!-- <button type="submit" class="btn-color-config btn btn-primary" name="commit"    value="save">Submit</button> -->
           </div>
-          <% end %>
         </div>
       </div>
+      <% end %>
 
 
 

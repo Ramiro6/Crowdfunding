@@ -63,7 +63,7 @@
           <% end %>
           <%= content_tag(:div, content_tag(:p, x.post_text), class: "p-style-post") %>
           <a href="" align="right"><i class="fa fa-trash trash-post"  aria-hidden="true"></i></a>
-          <%=link_to "Delete", x, method: :delete, data: {confirm: "Are your shore??"}%>
+                <%=link_to "Delete", post_path(x, post_id: x.id), method: :delete, data: {confirm: "Are your shore??"}%>
           </div>
           <!-- <%= x.post_text%> -->
 
@@ -72,18 +72,12 @@
 
     </div>
 
-
-
-
-
-
-
-
-
-    <form class="form-inline-home">
+    <div class="form-inline-home">
       <div class="cash">
         <div class="money">
-            <h3>2000 $</h3>
+          <% @text.each do |x| %>
+          <h3><%= x.maximum_amount %> $</h3>
+          <% end %>
         </div>
         <p class="month-config">Per month</p>
         <button class="follow-btn btn btn-primary" type="button" name="button">Follow</button>
@@ -91,7 +85,7 @@
 
 
         <div class="progress">
-          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <%=60%>%;">
             60%
           </div>
         </div>
@@ -105,8 +99,8 @@
           <div class="input-group-addon">.00</div>
         </div>
       </div>
-       <button type="submit" class="Transfer-button btn btn-primary">Transfer cash</button>
-    </form>
+       <button class="Transfer-button btn btn-primary">Transfer cash</button>
+    </div>
 
 
 
