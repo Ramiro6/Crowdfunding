@@ -16,8 +16,13 @@ class ProjectsController < ApplicationController
     @deposit = params[:payment]
     @new = Project.last
     @new.accompanied = @deposit
-    @new.save
-    @new = JSON.parse string
+    respond_to do |format|
+     if @new.save
+         format.html
+         format.json render :partial => "projects/home.json"
+     else
+     end
+   end
     # params[:amount] params[:project_id]
     #
     # project = Project.find(params[:project_id])
