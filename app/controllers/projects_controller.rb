@@ -10,13 +10,14 @@ class ProjectsController < ApplicationController
     end
     # @config = Project.new
   end
-# binding.pry
+
   def payment
     @amount = Project.last.maximum_amount
-    @deposit = parmas[:payment]
-    @new = Project.new
-    @new.accompanied = "#{@deposit}"
+    @deposit = params[:payment]
+    @new = Project.last
+    @new.accompanied = @deposit
     @new.save
+    @new = JSON.parse string
     # params[:amount] params[:project_id]
     #
     # project = Project.find(params[:project_id])

@@ -62,8 +62,7 @@
           <% else %>
           <% end %>
           <%= content_tag(:div, content_tag(:p, x.post_text), class: "p-style-post") %>
-          <a href="" align="right"><i class="fa fa-trash trash-post"  aria-hidden="true"></i></a>
-                <%=link_to "Delete", post_path(x, post_id: x.id), method: :delete, data: {confirm: "Are your shore??"}%>
+                <%=link_to "", post_path(x, post_id: x.id), class:"fa fa-trash trash-post", method: :delete, data: {confirm: "Are your shore??"}%>
           </div>
           <!-- <%= x.post_text%> -->
 
@@ -111,6 +110,10 @@
       <%= content_tag(:div, content_tag(:p, x.post_text), class: "star-project-post") %>
       <% end %>
   </div> -->
+  <% @text.each do |x| %>
+  <%= x.accompanied %>
+  <% end %>
+
 
 </div>
 

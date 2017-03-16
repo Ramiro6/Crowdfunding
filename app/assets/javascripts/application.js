@@ -81,12 +81,14 @@ $(document).ready(function() {
     $.ajax({
         url: "/home",
         type: "POST",
-        data: {payment: {
-                 amount: changeProgress($("#exampleInputAmount").val()),
-                  }},
+        data: {
+          payment: {
+            amount: $("#exampleInputAmount").val(),
+          }
+        },
         success: function(resp){
-          resp.data.name
-          $(".project-owner-name").text(resp.data.name)
+          changeProgress($("#exampleInputAmount").val()),
+          console.log("holaa");
         }
     });
   });
