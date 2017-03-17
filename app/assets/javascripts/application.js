@@ -87,8 +87,8 @@ $(document).ready(function() {
           }
         },
         success: function(resp){
-          changeProgress($("#exampleInputAmount").val()),
-          console.log("holaa");
+          changeProgress($("#exampleInputAmount").val())
+          $('#pp').html($("#exampleInputAmount").val());
         }
     });
   });

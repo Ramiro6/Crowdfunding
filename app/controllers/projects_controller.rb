@@ -11,18 +11,15 @@ class ProjectsController < ApplicationController
     # @config = Project.new
   end
 
+
   def payment
     @amount = Project.last.maximum_amount
     @deposit = params[:payment]
     @new = Project.last
     @new.accompanied = @deposit
-    respond_to do |format|
-     if @new.save
-         format.html
-         format.json render :partial => "projects/home.json"
-     else
-     end
-   end
+    if @new.save
+    end
+
     # params[:amount] params[:project_id]
     #
     # project = Project.find(params[:project_id])
@@ -54,6 +51,7 @@ class ProjectsController < ApplicationController
       @name = current_user.name
       @text = current_user.projects
       @post = current_user.posts
+      @deposit = Project.find(2)
     end
   end
 
