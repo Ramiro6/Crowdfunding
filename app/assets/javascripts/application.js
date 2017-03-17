@@ -78,17 +78,16 @@ $(document).ready(function() {
     event.preventDefault();
     changeProgress($("#exampleInputAmount").val());
 
+    var jj = { send_java: $("#exampleInputAmount").val(),}
+
     $.ajax({
         url: "/home",
         type: "POST",
-        data: {
-          payment: {
-            amount: $("#exampleInputAmount").val(),
-          }
-        },
+        data: jj,
         success: function(resp){
-          changeProgress($("#exampleInputAmount").val())
-          $('#pp').html($("#exampleInputAmount").val());
+          var rr = $("#exampleInputAmount").val()
+          changeProgress(rr)
+          $('#pp').html(rr);
         }
     });
   });

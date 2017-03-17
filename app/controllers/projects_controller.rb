@@ -13,12 +13,22 @@ class ProjectsController < ApplicationController
 
 
   def payment
-    @amount = Project.last.maximum_amount
-    @deposit = params[:payment]
-    @new = Project.last
-    @new.accompanied = @deposit
-    if @new.save
+    @amount = Project.last
+    @deposit = params[:send_java]
+
+    if @new = Project.last.nil?
+
+    else
+      @account = Project.last.accompanied
+      @tt = Project.last
+      @tt.accompanied = @deposit
+      @tt.sum(:@account)
+      @tt.save
+
     end
+
+
+
 
     # params[:amount] params[:project_id]
     #
@@ -51,7 +61,6 @@ class ProjectsController < ApplicationController
       @name = current_user.name
       @text = current_user.projects
       @post = current_user.posts
-      @deposit = Project.find(2)
     end
   end
 
