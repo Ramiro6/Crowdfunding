@@ -24,11 +24,14 @@
         <span class="caret"></span>
       </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li><a href="#">Action</a></li>
-          <li><%= link_to "Post", "/post"%></li>
-          <li><%= link_to "Config", "/config"%></li>
-          <li role="separator" class="divider"></li>
-          <li><%= link_to "logout", "/logout", :method => :delete %></li>
+          <li  align="center"></li>
+          <li role="separator" class="divider",></li>
+          <li align="center" class="color-li-menu"><%= link_to "Post", "/post", class:"redirect-menu"%></li>
+          <li role="separator" class="divider",></li>
+          <li align="center" class="color-li-menu"><%= link_to "Config", "/config",class:"redirect-menu"%></li>
+          <li role="separator" class="divider",></li>
+          <li align="center" class="color-li-menu"><%= link_to "logout", "/logout", class:"redirect-menu", :method => :delete %></li>
+          <li role="separator" class="divider",></li>
         </ul>
     </div>
   </div>

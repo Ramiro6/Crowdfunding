@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 
-gem 'bootsy'
+
 gem "font-awesome-rails"
 gem "paperclip", "~> 5.0.0"
 gem 'bootstrap', '~> 4.0.0.alpha6'

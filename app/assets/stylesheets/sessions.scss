@@ -19,7 +19,12 @@
 
 .dropdown-menu {
   left: -57px;
-  border-color: #5cb85c
+  border-color: #5cb85c;
+  background-color: #292b2c;
+}
+
+.nav-link {
+
 }
 
 // img - reponsive
@@ -433,6 +438,23 @@
 }
 
 .trash-post:hover{
-  color: #9e381c;
   text-decoration: none
+}
+.redirect-menu{
+  color: #5cb85c;
+}
+
+.redirect-menu:hover{
+  color: white;
+  text-decoration: none;
+}
+
+.color-li-menu:hover{
+  background-color: #419641;
+}
+
+.divider{
+  background-color: white;
+  border: 0.00001em solid white;
+  color: white;
 }
