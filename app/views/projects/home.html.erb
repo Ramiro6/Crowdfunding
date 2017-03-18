@@ -44,7 +44,7 @@
         <%= image_tag( x.avatar, class: "avatar-responsive img-responsive img-circle", width: "150", height: "150")  %>
       </div>
 
-      <div class="button-user"> </div>
+      <div class="button-user"> <%= x.project_name %></div>
     </div>
 
     <div class="star-project">
@@ -62,7 +62,7 @@
           <% else %>
           <% end %>
           <%= content_tag(:div, content_tag(:p, x.post_text), class: "p-style-post") %>
-                <%=link_to "", post_path(x, post_id: x.id), class:"fa fa-trash trash-post", method: :delete, data: {confirm: "Are your shore??"}%>
+                <%=link_to "", post_path(x, post_id: x.id), class:"fa fa-trash trash-post", align: "right", method: :delete, data: {confirm: "Are your shore??"}%>
           </div>
           <!-- <%= x.post_text%> -->
 

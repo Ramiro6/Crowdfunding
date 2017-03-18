@@ -34,7 +34,7 @@
 // .box {
 //   height:100%;
 //   display: flex;
-//   border: 1px solid black;
+//   // border: 1px solid black;
 //   padding-left: 100px;
 //   padding-right: 100px;
 //   margin: 10px;
@@ -50,7 +50,7 @@
   .box {
     height:100%;
     display: flex;
-    border: 1px solid black;
+    // border: 1px solid black;
     padding-left: 0px;
     padding-right: 0px;
     margin: 10px;
@@ -67,7 +67,7 @@
   .box {
     height:100%;
     display: flex;
-    border: 1px solid black;
+    // border: 1px solid black;
     padding-left: 0px;
     padding-right: 0px;
     margin: 10px;
@@ -84,7 +84,7 @@
   .box {
     height:100%;
     display: flex;
-    border: 1px solid black;
+    // border: 1px solid black;
     padding-left: 100px;
     padding-right: 100px;
     margin: 10px;
@@ -134,8 +134,10 @@
   border-color: #e45933;
 }
 .follow-btn:hover {
-  background-color: #d24a25;;
-  border-color: #d24a25;;
+  background-color: #d24a25;
+  border-color: #d24a25;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor:pointer; cursor: hand
 }
 
 .money-deposit{
@@ -159,7 +161,7 @@
   // border: 1px solid black;
   width: 220px;
   // padding: 20px;
-  // border-radius: 50%;
+  border-radius: 5px;
   margin-right: 30px;
   height: 250px;
   display: flex;
@@ -295,6 +297,7 @@
   width: 300px;
   // height: 350px;
    display: flex;
+   border-radius: 5px;
   //  align-items: flex-start;
   // border: 1px solid black;
   margin-left: 30px;
@@ -317,12 +320,20 @@
 .Transfer-button:hover{
   background-color: #54a754;
   border-color: #54a754;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor:pointer; cursor: hand;
 }
 
 .button-user {
-  padding: 20px;
-  border: 1px solid black;
+  font-family: 'Nunito', sans-serif;
+  padding: 0px;
+  // border: 1px solid black;
   width: 220px;
+  display: flex;
+  justify-content: center;
+  background-color: #5cb85c;
+  color: white;
+  font-size: 22px;
   // flex-direction: column;
 }
 
@@ -333,6 +344,11 @@
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 10px;
+
+//   line-height: 1.25;
+// color: #464a4c;
+// border: 1px solid rgba(0, 0, 0, 0.15);
+// border-radius: 0.25rem;
 }
 
 // .img-center {
@@ -410,4 +426,13 @@
   color: #fff;
   background-color: #449d44;
   border-color: #419641;
+}
+
+.trash-post{
+  color: #d24a25;
+}
+
+.trash-post:hover{
+  color: #9e381c;
+  text-decoration: none
 }

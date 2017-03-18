@@ -22,7 +22,6 @@ class ProjectsController < ApplicationController
       @account = Project.last.accompanied
       @tt = Project.last
       @tt.accompanied = @deposit
-      @tt.sum(:@account)
       @tt.save
 
     end
@@ -79,6 +78,6 @@ class ProjectsController < ApplicationController
 
   private
   def user_params
-    params.require(:project).permit(:avatar, :text, :maximum_amount, :accompanied)
+    params.require(:project).permit(:avatar, :text, :maximum_amount, :accompanied, :project_name)
   end
 end

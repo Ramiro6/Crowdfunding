@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20170308131133) do
     t.string   "text"
     t.string   "maximum_amount"
     t.string   "accompanied"
+    t.string   "project_name"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.integer  "user_id"

@@ -29,6 +29,18 @@
         <% end %>
       </div>
 
+      <div class="text-config">
+        <%= form_for @config do |x| %>
+        <div class="text-center">
+        <h5><%= x.label :project_name %></h5>
+        <h5><%= x.text_field :project_name %></h5>
+          <div class="text-center">
+          <button type="submit" class="btn-color-config btn btn-primary" align="center" name="commit" value="save">Submit</button>
+          </div>
+        </div>
+        <% end %>
+      </div>
+
         <div class="text-center">
           <%= link_to "Back", "/home"%>
         </div>

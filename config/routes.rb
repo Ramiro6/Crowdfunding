@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   resources :users, :projects
   get '/', to: 'index#index'
   get '/save', to: 'users#save'
