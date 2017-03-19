@@ -24,8 +24,43 @@
 </nav>
 
 
+  <div class="banner-div-index">
+    <div class="container-fluid">
+    <div class="row">
+      <div class="text-index-banner text-center">
+        <h1 class="col-md-12 size-text">Make it Happen</h1>
+        <h3 class="size-text-2">Supports incredible projects to become reality</h3>
+        <form action="/users/new">
+          <button type="submit" class="start-your-project btn btn-success">Start your Project</button>
+        </form>
+      </div>
+    </div>
 
+    </div>
+
+    <%= image_tag("grafica_web.png", class: "img-responsive img-fluid img-absolut-index") %>
+  </div>
+
+  <section class="">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="find-project-index text-center">
+          <h3 class="col-md-12 size-find-project">Find a Project and Help finance it</h3>
+
+
+
+        </div>
+      </div>
+    </div>
+    <div class="option-project"></div>
+  </section>
+
+
+<section class="result-all-find">
     <% @user.each do |x| %>
+    <div class="center-img-index">
+
+
     <div class="user-img-index">
       <div class="user-img-circle-index">
     <%= link_to image_tag( x.avatar, class: "avatar-responsive", width: "150", height: "150"),explore_path(x,project_id: x.id) %>
@@ -33,9 +68,20 @@
       <!-- <%= image_tag( x.avatar, class: "avatar-responsive img-responsive img-circle", width: "150", height: "150") %> -->
       <% else %>
       <% end  %>
+      </div>
+        <div class="button-user"> <%= x.project_name %></div>
     </div>
   </div>
+
     <% end %>
+
+</section>
+
+<footer class="end">
+
+
+
+</footer>
 
 
 <div class="hola">  </div>

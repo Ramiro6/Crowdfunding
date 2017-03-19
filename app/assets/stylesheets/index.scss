@@ -1,6 +1,7 @@
 // Place all the styles related to the index controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
 .user-img-circle-index {
   // border: 1px solid black;
   border-radius: 50%;
@@ -16,12 +17,123 @@
   width: 220px;
   // padding: 20px;
   // border-radius: 50%;
-  margin-right: 30px;
+  margin-right: 0px;
   height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: rgb(87, 203, 213);
+}
+.user-img-index:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.46), 0 6px 20px 0 rgba(130, 130, 130, 0.47);
+  border-radius: 10px;
+}
+
+.user-img-circle-index:hover {
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.center-img-index {
+  margin: 0px;
+  display: inline-flex;
+  // border: 1px solid black;
+}
+
+
+.banner-div-index{
+  position: relative;
+}
+
+// .text-index-banner{
+//   margin-top: 100px;
+//   position: absolute;
+//   min-width: 100%;
+// }
+
+// .size-text {
+//   font-size: 90px;
+// }
+
+@media (min-width: 0px) {
+  .text-index-banner{
+    margin-top: 0px;
+    position: absolute;
+    min-width: 100%;
+    font-size: 30px
+  }
+  .size-text {
+    font-size: 40px;
+  }
+
+  .size-text-2{
+    font-size: 15px
+  }
+
+  .start-your-project{
+    margin-top: 10px;
+    width: 155px;
+  }
+
+}
+
+@media screen and (min-width: 800px) {
+  .text-index-banner{
+    margin-top: 150px;
+    position: absolute;
+    min-width: 100%;
+    font-size: 60px
+  }
+  .size-text {
+    font-size: 90px;
+  }
+
+  .size-text-2{
+    font-size: 25px;
+  }
+
+  .start-your-project{
+    margin-top: 10px;
+    width: 255px;
+  }
+
+}
+
+// .start-your-project{
+//   margin-top: 10px;
+//   width: 255px;
+// }
+
+.start-your-project:hover{
+  // background-color: #54a754;
+  // border-color: #54a754;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor:pointer; cursor: hand;
+}
+
+.size-find-project {
+  font-size: 40px;
+}
+
+.find-project-index{
+  margin-top: 40px;
+  min-width: 100%;
+  position: absolute;
+}
+
+
+
+.option-project {
   background-color: white;
+  height: 120px;
+}
+
+.result-all-find {
+  height: 400px;
+  background-color: rgb(87, 203, 213);
+}
+
+.end{
+  background-color: #292b2c;
+  height: 60px;
 }

@@ -70,8 +70,8 @@ $(document).ready(function() {
    function changeProgress (amount) {
    	$(".progress-bar")
    		.attr("aria-valuenow", amount)
-   		.width(amount + "%")
-   		.text(amount + "%");
+   	// 	.width(amount + "%")
+   	// 	.text(amount + "%");
   }
 
   $(".Transfer-button").on("click", function (event) {
@@ -87,7 +87,7 @@ $(document).ready(function() {
         success: function(resp){
           var rr = $("#exampleInputAmount").val()
           changeProgress(rr)
-          $('#pp').html(rr);
+          // $('#pp').html(rr);
         }
     });
   });

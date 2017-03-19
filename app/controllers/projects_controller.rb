@@ -13,40 +13,37 @@ class ProjectsController < ApplicationController
 
 
   def payment
-    @amount = Project.last
     @deposit = params[:send_java]
+    @java = params[:send_java]
+    @rails = Project.last.accompanied
+    @total_var = Project.last
+    @total_var.accompanied = @java.to_i + @rails.to_i
+    @total_var.save
 
-    if @new = Project.last.nil?
-
-    else
-      @account = Project.last.accompanied
-      @tt = Project.last
-      @tt.accompanied = @deposit
-      @tt.save
-
-    end
-
-
-
-
-    # params[:amount] params[:project_id]
+    # if @new = Project.last.nil?
     #
-    # project = Project.find(params[:project_id])
-    # name = project.name
-
-    # @payment = current_user.projects.maximum_amount
-    # @payment = Project.new params['subcomment']
-    # if @payment.save
-    #   render :json => { message: "bla" } # send back any data if necessary
     # else
-    #   render :json => { name: name }, :status => 500
+    #   @java = params[:send_java]
+    #   @rails = Project.find(params[:project_id]).accompanied
+    #   @total_var = Project.find(params[:project_id])
+    #   @total_var.accompanied = @java.to_i + @rails.to_i
+    #   @total_var.save
     # end
   end
+
 
   def explore
     @home = User.find(params[:project_id])
     @text = Project.find(params[:project_id])
     @post = @home.posts
+
+    @java = params[:send_java].to_i
+
+    @rails = Project.find(params[:project_id]).accompanied.to_i
+    @total_var = Project.find(params[:project_id])
+    @total_var.accompanied = @java + @rails
+    @total_var.accompanied.to_s
+    @total_var.save
   end
 
   def edit
